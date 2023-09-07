@@ -3,14 +3,6 @@
 
 }
 
-:root[data-theme="light"] {
-
-}
-
-:root[data-theme="dark"] {
-
-}
-
 
 /* GLOBAL */
 body {
@@ -18,11 +10,14 @@ body {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: "League Spartan", "Arial", sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 500;
+  line-height: 131.579%;
+  letter-spacing: -0.03956em;
   background-color: #fff;
-  color: #222;
+  color: #927b91;
+
 }
 
 img {
@@ -72,9 +67,9 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1158px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -84,6 +79,101 @@ select:-webkit-autofill:focus {
 .main-content {
   flex-grow: 1;
 }
+
+
+/* REVIEW CARD */
+.review-card {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  padding: 40px 32px 35px;
+  border-radius: 8px;
+  font-size: 1.0625rem;
+  background-color: #512051;
+  color: #fff;
+}
+
+.review-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.review-card__name {
+  font-weight: 700;
+  line-height: normal;
+}
+
+.review-card__title {
+  line-height: normal;
+  color: #ee69a4;
+}
+
+.review-card__quote {
+  grid-column: 1 / -1;
+  font-weight: 500;
+  line-height: 129.412%;
+  letter-spacing: -0.019em;
+}
+
+.review-card__quote-paragraph:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+
+/* SOCIAL-PROOF */
+.social-proof {
+  padding-top: 82px;
+  padding-bottom: 100px;
+}
+
+.social-proof__copy {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.social-proof__heading {
+  margin-bottom: 16px;
+  font-size: 2.5rem;
+  line-height: 0.8;
+  letter-spacing: -0.08931em;
+  color: #512051;
+}
+
+.social-proof__ratings {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 48px;
+  list-style: none;
+}
+
+.social-proof__ratings-item {
+  display: grid;
+  justify-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: normal;
+  background-color: #f7f2f7;
+  color: #512051;
+  text-align: center;
+}
+
+.social-proof__rating-icon {
+  margin-bottom: 16px;
+}
+
+.social-proof__reviews {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
