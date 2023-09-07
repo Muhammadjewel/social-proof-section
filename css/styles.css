@@ -137,7 +137,6 @@ select:-webkit-autofill:focus {
   margin-bottom: 16px;
   font-size: 2.5rem;
   line-height: 0.8;
-  letter-spacing: -0.08931em;
   color: #512051;
 }
 
@@ -153,6 +152,7 @@ select:-webkit-autofill:focus {
 .social-proof__ratings-item {
   display: grid;
   justify-items: center;
+  gap: 16px;
   padding: 16px;
   border-radius: 8px;
   font-size: 1.0625rem;
@@ -161,10 +161,6 @@ select:-webkit-autofill:focus {
   background-color: #f7f2f7;
   color: #512051;
   text-align: center;
-}
-
-.social-proof__rating-icon {
-  margin-bottom: 16px;
 }
 
 .social-proof__reviews {
@@ -183,4 +179,85 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+}
+
+
+/* 768px */
+@media only screen and (min-width: 48em) {
+  .social-proof__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+    align-items: center;
+  }
+
+  .social-proof__copy {
+    margin-bottom: 0;
+  }
+
+  .social-proof__ratings {
+    margin-bottom: 0;
+  }
+
+  .social-proof__reviews {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 1158px */
+@media only screen and (min-width: 72.375em) {
+  .review-card {
+    gap: 32px 24px;
+  }
+
+  .social-proof {
+    padding-top: 118px;
+    padding-bottom: 132px;
+  }
+
+  .social-proof__container {
+    grid-template-columns: repeat(2, 445px);
+    justify-content: space-between;
+    gap: 72px;
+  }
+
+  .social-proof__copy {
+    text-align: left;
+  }
+
+  .social-proof__heading {
+    font-size: 3.5rem;
+    line-height: 85.714%;
+  }
+
+  .social-proof__ratings-item {
+    grid-template-columns: 117px 1fr;
+    justify-items: start;
+    gap: 32px;
+    width: 100%;
+    padding: 20px 32px;
+    text-align: left;
+  }
+
+  .social-proof__ratings-item:nth-child(1) {
+    margin-left: -96px;
+  }
+
+  .social-proof__ratings-item:nth-child(2) {
+    margin-left: -48px;
+  }
+
+  .social-proof__reviews {
+    align-items: start;
+    gap: 0 32px;
+  }
+
+  .social-proof__reviews-item:nth-child(3n + 2) {
+    margin-top: 16px;
+  }
+
+  .social-proof__reviews-item:nth-child(3n + 3) {
+    margin-top: 32px;
+  }
 }
