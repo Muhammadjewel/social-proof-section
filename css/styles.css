@@ -126,6 +126,12 @@ select:-webkit-autofill:focus {
 .social-proof {
   padding-top: 82px;
   padding-bottom: 100px;
+  background-image:
+    url("../img/social-proof-bg-mobile-top.svg"),
+    url("../img/social-proof-bg-mobile-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+  background-size: auto, 100%;
 }
 
 .social-proof__copy {
@@ -184,6 +190,13 @@ only screen and (                min-resolution: 2dppx) {
 
 /* 768px */
 @media only screen and (min-width: 48em) {
+  .social-proof {
+    background-image: url("../img/social-proof-bg-desktop.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .social-proof__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
