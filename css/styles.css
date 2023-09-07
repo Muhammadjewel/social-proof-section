@@ -124,6 +124,7 @@ select:-webkit-autofill:focus {
 
 /* SOCIAL-PROOF */
 .social-proof {
+  min-height: 100dvh;
   padding-top: 82px;
   padding-bottom: 100px;
   background-image:
